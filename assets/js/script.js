@@ -3,7 +3,7 @@ var text_Suffix = ":00am";
 
 var storedBlocks = [];
 var storedBlocks_NAME = "Stored Blocks";
-
+//this function is for the colour associated withdate/time display at the top of the webpage
 function setBGColor($div, currentTime, textTime)
 {
     var iTime_CUR = currentTime.split("");
@@ -60,7 +60,7 @@ function generateHourBlock(iterations)
     {
         iterations = 1;
     }
-
+//this variable is designed to display the current hour timeslot on the day planner relative to what time of day it is
     var currentTime = GetCurrentHour("LT");
 
     for(var i = 0; i < iterations; i++)
@@ -89,7 +89,7 @@ function generateHourBlock(iterations)
     }
 
 }
-
+//this function sets the increment icrease of the time indicator to show seconds and to increase by the second.
 function incrementTextHour()
 {
     if(text_Hour === 12)
@@ -106,14 +106,14 @@ function incrementTextHour()
     }
 }
 
-
+//this function uses moment js to find and dispaly the current date
 function DisplayDate(pFormat)
 {
     var date = moment().format(pFormat);
 
     $("#current-date").text(date);
 }
-
+//this function uses moment js to find and display the proper time at the top of the screen. it is set to display time as AM if it is morning and PM if afternoon
 function GetCurrentHour(pFormat)
 {
     var time = moment().format(pFormat).toLowerCase();
@@ -179,7 +179,7 @@ function AlterStoredBlocks(pText, pID)
     localStorage.setItem(storedBlocks_NAME, JSON.stringify(storedBlocks));
 }
 
-
+//this is the function to retrieve saved items on the planner from local storage so they can be displayed again when the website is opened again or refreshed
 function GetStoredBlocks()
 {
 
@@ -208,7 +208,7 @@ function GetStoredBlocks()
 generateHourBlock(9);
 DisplayDate("LLLL");
 GetStoredBlocks();
-
+//this is the function for the lock/unlock button
 
 $(".lock").click(function() {
     console.log("lock clicked");

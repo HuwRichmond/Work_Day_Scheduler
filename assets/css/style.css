@@ -2,27 +2,27 @@ html, body{
     height : 100%;
     width : 100%;
 }
-
+/*this is the time/date colouring*/
 .text-green
 {
-  color : #1aad53;
+  color : green;
 }
 
-/* :::::::::::::: Presentation css */
+/*main styling and colours for the lock/unlock buttons */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --locked-color: #5fadbf;
-    --unlocked-color: #ff5153;
+    --locked-color: grey;
+    --unlocked-color: red;
   }
   .lock-container {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  /* :::::::::::::: Required CSS */
-  /* Locked */
+  /*Required CSS */
+  /* Locked button styling */
   .lock {
     width: 24px;
     height: 21px;
@@ -33,6 +33,7 @@ html, body{
     -webkit-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
   }
+  /*this is the css for the button when it is locked*/
   .lock:after {
     content: "";
     display: block;
@@ -46,6 +47,7 @@ html, body{
     -webkit-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
   }
+  /*this is the css for the lock buttons when unlocked*/
   .lock:before {
     content: "";
     display: block;
@@ -62,11 +64,11 @@ html, body{
     -webkit-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
   }
-  /* Locked Hover */
+  /* Locked Hover over buttons */
   .lock:hover:before {
     height: 12px;
   }
-  /* Unlocked */
+  /* Unlocked buttons*/
   .unlocked {
     transform: rotate(10deg);
   }
@@ -83,7 +85,7 @@ html, body{
   .unlocked:after {
     background: var(--unlocked-color);
   }
-  /* Unlocked Hover */
+  /* Unlocked Hover over buttons */
   .unlocked:hover {
     transform: rotate(3deg);
   }

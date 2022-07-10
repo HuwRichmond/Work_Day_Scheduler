@@ -1,4 +1,5 @@
 //! moment.js
+//!this js file was copied in it's entirety to allow use of moment.js in the design
 
 ;(function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
