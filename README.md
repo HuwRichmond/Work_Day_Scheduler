@@ -24,4 +24,4 @@ Below is a screenshot of the webpage when opened in the browser.
 
 ![Screenshot of deployed application on browser".](./assets/screnshots/Screenshot.png)
 
-URL for deployed application is: https://huwrichmond.github.io/Password-Generator/
+URL for deployed application is: https://huwrichmond.github.io/Work_Day_Scheduler/
